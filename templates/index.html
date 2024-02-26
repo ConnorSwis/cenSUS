@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href=" {{url_for('static', filename='apple-touch-icon.png')}}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href=" {{url_for('static', filename='favicon-32x32.png')}}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href=" {{url_for('static', filename='favicon-16x16.png')}}"
+    />
+    <link
+      rel="manifest"
+      href=" {{url_for('static', filename='site.webmanifest')}}"
+    />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fuzzysort/2.0.4/fuzzysort.js"
+      integrity="sha512-sdAWRZSPnL/EbXixTyBhffFggsxlPrxEMLKvseTBMfY3MGxYvXvm83S/WddNpx1tXPylK5warEPp7uu1yiNsgA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="{{url_for('static', filename='js/main.js')}}"></script>
+  </head>
+  <body>
+    <main
+      class="w-screen min-h-screen flex items-center flex-col space-y-4 p-4 bg-gray-100"
+    >
+      <h1>Census Data</h1>
+      <input type="text" name="searchQuery" id="searchQuery" />
+      <form id="variableForm">
+        <div id="results"></div>
+        <h2>Select Variables</h2>
+        <div id="checkboxes">
+          <!-- Checkboxes will be inserted here -->
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
